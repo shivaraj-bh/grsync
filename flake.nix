@@ -16,11 +16,14 @@
       ];
       perSystem = { config, self', pkgs, lib, ... }: {
         rust-project.crates."grsync".crane.args = {
-          buildInputs = lib.optionals pkgs.stdenv.isDarwin (
-            with pkgs.darwin.apple_sdk.frameworks; [
-              SystemConfiguration
-            ]
-          );
+          buildInputs = lib.optionals pkgs.stdenv.isDarwin
+            (
+              with pkgs.darwin.apple_sdk.frameworks; [
+                SystemConfiguration
+              ]
+            ) ++ lib.optionals pkgs.stdenv.isLinux [
+            pkgs.openssl
+          ];
         };
 
         devShells.default = pkgs.mkShell {
