@@ -7,22 +7,5 @@ This tool is heavily inspired by https://github.com/clyang/GRsync
 ## Usage
 
 1. Enable GR-III's Wi-Fi access point, and connect to it
-2. Run command (see below)
+2. `nix run github:shivaraj-bh/grsync`
 
-## Command examples
-
-```bash
-# Downloads images into ./downloaded_photos directory.
-# Already downloaded ones are skipped.
-$ grsync
-
-# Downloads images into ./hoge directory
-$ grsync -o hoge
-
-# Downloads all images, including already downloaded ones.
-$ grsync --force
-```
-
-## Installation
-
-see: https://github.com/genya0407/grsync/releases
