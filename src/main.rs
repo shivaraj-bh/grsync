@@ -55,7 +55,7 @@ impl Grsync {
             let dir_path = std::path::Path::new(&self.output_dir).join(&dir.name);
             std::fs::create_dir_all(&dir_path).unwrap();
             for file_name in &dir.files {
-                let target_file_path = dir_path.join(&file_name);
+                let target_file_path = dir_path.join(file_name);
                 if self.force || !target_file_path.try_exists().unwrap() {
                     photos_to_be_downloaded.push((&dir.name, file_name));
                 }

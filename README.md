@@ -9,3 +9,9 @@ This tool is heavily inspired by https://github.com/clyang/GRsync
 1. Enable GR-III's Wi-Fi access point, and connect to it
 2. `nix run github:shivaraj-bh/grsync`
 
+## Development
+
+```sh
+direnv allow
+cargo build
+```
