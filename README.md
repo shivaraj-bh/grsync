@@ -9,6 +9,9 @@ This tool is heavily inspired by https://github.com/clyang/GRsync
 1. Enable GR-III's Wi-Fi access point, and connect to it
 2. `nix run github:shivaraj-bh/grsync`
 
+>[!NOTE]
+> Your photos/videos will by default be saved in `./downloaded_photos`
+
 ## Development
 
 ```sh
